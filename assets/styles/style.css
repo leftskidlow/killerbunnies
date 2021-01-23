@@ -1,0 +1,288 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap');
+@font-face {
+  font-family: Enviro;
+  src: url(../fonts/Enviro.ttf);
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    overflow: scroll;
+}
+
+section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(#1c1c25, #303030);
+}
+
+section::before {
+    content: '';
+    position: absolute;
+    bottom: -5%;
+    left: 70%;
+    width: 200px;
+    height: 200px;
+    background: linear-gradient(#f00, #f0f);
+    border-radius: 50%;
+}
+section::after {
+    content: '';
+    position: absolute;
+    top: 10%;
+    left: -5%;
+    width: 200px;
+    height: 200px;
+    background: linear-gradient(#f00, #f0f);
+    border-radius: 50%;
+}
+.card:hover .face.front {
+    transform: rotateY(180deg);
+}
+.card .face.back {
+    transform: rotateY(180deg);
+}
+.card:hover .face.back {
+    transform: rotateY(360deg);
+}
+
+/*
+ * Places the bottom five cards down on the bottom half the screen
+ */
+
+.hand1 {
+    position: absolute;
+    bottom: 125px;
+    left: 150px;
+    width: 200px;
+    height: 300px;
+    transform-style: preserve-3d;
+    perspective: 500px;
+    z-index: 1;
+}
+.hand2 {
+    position: absolute;
+    bottom: 125px;
+    left: 360px;
+    width: 200px;
+    height: 300px;
+    transform-style: preserve-3d;
+    perspective: 500px;
+    z-index: 1;
+}
+.hand3 {
+    position: absolute;
+    bottom: 125px;
+    left: 570px;
+    width: 200px;
+    height: 300px;
+    transform-style: preserve-3d;
+    perspective: 500px;
+    z-index: 1;
+}
+.hand4 {
+    position: absolute;
+    bottom: 125px;
+    left: 780px;
+    width: 200px;
+    height: 300px;
+    transform-style: preserve-3d;
+    perspective: 500px;
+    z-index: 1;
+}
+.hand5 {
+    position: absolute;
+    bottom: 125px;
+    left: 990px;
+    width: 200px;
+    height: 300px;
+    transform-style: preserve-3d;
+    perspective: 500px;
+    z-index: 1;
+}
+
+/*
+ * Places the two cards down in 'stack' upside down.
+ * NOT BUILT YET
+ */
+
+.face {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+    border-radius: 15px;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    transform-style: preserve-3d;
+    transition: 1s;
+    backface-visibility: hidden;
+}
+.face.front .cardType {
+    position: absolute;
+    width: 100%;
+    top: 10px;
+    right: 30px;
+    color: #fff;
+    font-family: Enviro;
+    font-size: 1.15rem;
+    text-align: right;
+}
+.face.front .background {
+    position: absolute;
+    top: 8px;
+    left: 2px;
+    width: 97%;
+    z-index: 1;
+}
+.face.front .ball {
+    position: absolute;
+    top: 8px;
+    left: 2px;
+    max-width: 36px;
+
+}
+.diceText {
+    position: absolute;
+    bottom: -3px;
+    left: 4px;
+    font-size: 12px;
+    text-align: center;
+    font-weight: 500;
+    z-index: 1;
+}
+.face.front .dieColor1 {
+    position: absolute;
+    height: 13px;
+    width: 14px;
+    top: 10px;
+    right: 6px;
+}
+.face.front .dieColor2 {
+    position: absolute;
+    height: 14px;
+    width: 14px;
+    top: 30px;
+    right: 6px;
+    z-index: -1;
+}
+.face.front .dieColor3 {
+    position: absolute;
+    height: 13px;
+    width: 14px;
+    top: 51px;
+    right: 6px;
+}
+.face.front .dieColor4 {
+    position: absolute;
+    height: 14px;
+    width: 14px;
+    top: 71px;
+    right: 6px;
+}
+.face.front .dieColor5 {
+    position: absolute;
+    height: 13px;
+    width: 14px;
+    top: 92px;
+    right: 6px;
+}
+.face.front .dieColor6 {
+    position: absolute;
+    height: 13px;
+    width: 14px;
+    top: 113px;
+    right: 6px;
+}
+.face.front .dieColor7 {
+    position: absolute;
+    height: 13px;
+    width: 14px;
+    top: 133px;
+    right: 6px;
+}
+.face.front .dieColor8 {
+    position: absolute;
+    height: 13px;
+    width: 14px;
+    top: 154px;
+    right: 6px;
+}
+.face.front .imgContainer {
+    position: absolute;
+    height: 195px;
+    width: 97%;
+    bottom: 70px;
+    left: 2px;
+    z-index: 10;
+}
+.face.front .imgContainer .cardImage {
+    display: block;
+    margin: auto;
+    max-width: 100%;
+    max-height: 195px;
+
+}
+.face.front .agressiveBox {
+    position: absolute;
+    height: 48px;
+    width: 18px;
+    background: #fff;
+    top: 178px;
+    left: 2px;
+    z-index: -1;
+}
+.face.front .title {
+    position: absolute;
+    width: 190px;
+    bottom: 50px;
+    left: 5px;
+    color: #fff;
+    font-family: Enviro;
+    font-size: 1.15rem;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: -2px;
+}
+.face.front .cardDescription {
+    position: absolute;
+    bottom: 6px;
+    left: 4px;
+    width: 190px;
+    height: 40px;
+    border-radius: 0 0 7px 7px;
+}
+.face.front .cardDescription .text {
+    width: 99%;
+    height: 95%;
+    margin: 3px auto;
+    text-align: center;
+    color: #fff;
+    font-family: Enviro, sans-serif;
+    font-size: 10px;
+    overflow:hidden;
+}
+
+.face.back {
+    background: rgba(68, 142, 226, 0.459);
+}
+
+.face.back .text {
+    width: 98%;
+    height: 95%;
+    margin: 40px auto;
+    text-align: center;
+    color: #fff;
+    font-family: Enviro, sans-serif;
+    font-size: 14px;
+    overflow:hidden;
+}
