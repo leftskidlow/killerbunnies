@@ -19,7 +19,8 @@ const trial = Card(
     "vsp", 
     ["twenty", "twenty", "twenty", "chinese"], 
     "agressive", 
-    "./assets/images/card_images/0054.png");
+    "./assets/images/card_components/text.png");
+    //"./assets/images/card_images/0054.png");
 
 /* 
  * Helper functions used to set the appropriate parameters for the cards
